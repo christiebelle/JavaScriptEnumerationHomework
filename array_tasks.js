@@ -46,12 +46,12 @@ var arrayTasks = {
 
 	findIndexesOf: function (arr, itemToFind) {
 		let indexes = [];
-		for(let i = 0; i < arr.length; i++){
-				if(arr[i] === itemToFind) {
-						let foundIndex = arr.findIndex(i);
+		arr.forEach(function(num){
+				if(num === itemToFind) {
+						let foundIndex = arr.findIndex(num);
 							indexes.push(foundIndex);
 					};
-				};
+				});
 			return indexes;
 	},
 
