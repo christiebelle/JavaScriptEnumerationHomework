@@ -44,16 +44,26 @@ var arrayTasks = {
 				return arr;
 	},
 
+	// findIndexesOf: function (arr, itemToFind){
+	// 	let indexes = [];
+	// 		for(i = 0; i < arr.length; i++){
+	// 				let foundIndex = arr.findIndex(element => element === itemToFind);
+	// 					indexes.push(foundIndex);
+	// 			};
+	// 	return indexes;
+	// },
+
 	findIndexesOf: function (arr, itemToFind) {
 		let indexes = [];
-		arr.forEach(function(num){
-				if(num === itemToFind) {
-						let foundIndex = arr.findIndex(num);
-							indexes.push(foundIndex);
-					};
-				});
+			for (index in arr){
+				if (arr[index] === itemToFind){
+					indexes.push(parseInt(index));
+				}
+			}
 			return indexes;
-	},
+		},
+
+
 
 	sumOfAllEvenNumbersSquared: function (arr) {
 		let evens = arr.filter(even => even % 2 ===0);
